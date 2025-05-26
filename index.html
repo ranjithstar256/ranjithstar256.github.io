@@ -2,28 +2,382 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>AndroidManifester | Expert Android Development & Training</title>
-  <meta name="description" content="AndroidManifester offers expert Android app development, comprehensive training, and consultancy services. Learn from a Google Certified Android Developer and transform your digital experience.">
-  <meta name="keywords" content="Android Development, Android Training, Android Consultancy, Android Apps, Professional Android Solutions, Expert Android Developer, Android Training in Chennai">
-  <meta name="author" content="K P Ranjith">
+  <title>AndroidManifester | Google Certified Android Developer & Trainer | Chennai</title>
+  <meta name="description" content="Learn Android, iOS & Flutter from Google Certified Developer K.P. Ranjith Kumar. 12+ years experience, 20,000+ students trained. Corporate training for Meta, TATA Steel, Toyota & more.">
+  <meta name="keywords" content="Android training Chennai, iOS training, Flutter development, Google Certified Android Developer, K P Ranjith, Android courses, mobile app development training, corporate training Chennai">
+  <meta name="author" content="K P Ranjith Kumar">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.androidmanifester.in/">
   
   <!-- Open Graph / Social Sharing -->
-  <meta property="og:title" content="AndroidManifester | Expert Android Development & Training">
-  <meta property="og:description" content="Expert Android app development, training, and consultancy services by a Google Certified Android Developer.">
+  <meta property="og:title" content="AndroidManifester | Google Certified Android Developer & Trainer">
+  <meta property="og:description" content="Expert Android, iOS & Flutter training with 12+ years experience. Corporate training for Fortune 500 companies.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.androidmanifester.in/">
   <meta property="og:image" content="https://www.androidmanifester.in/am.png">
+  <meta property="og:locale" content="en_IN">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AndroidManifester | Expert Mobile App Development Training">
+  <meta name="twitter:description" content="Learn from Google Certified Developer with 12+ years experience">
+  <meta name="twitter:image" content="https://www.androidmanifester.in/am.png">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "AndroidManifester",
+    "image": "https://www.androidmanifester.in/am.png",
+    "url": "https://www.androidmanifester.in",
+    "telephone": "+918148580586",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "27/2 Sardar Patel Road",
+      "addressLocality": "Guindy, Chennai",
+      "addressRegion": "Tamil Nadu",
+      "postalCode": "600032",
+      "addressCountry": "IN"
+    },
+    "priceRange": "₹₹",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "2500"
+    },
+    "sameAs": [
+      "https://www.facebook.com/androidmanifester",
+      "https://www.instagram.com/ranjithstar256/",
+      "https://twitter.com/ran_jiith",
+      "https://in.linkedin.com/in/androidranjith",
+      "https://github.com/ranjithstar256"
+    ]
+  }
+  </script>
 
   <link rel="icon" type="image/png" href="am.png">
+  <link rel="apple-touch-icon" href="am.png">
+  
+  <!-- CSS -->
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/vendor.css">
   
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <!-- Custom Styles -->
+  <style>
+    /* Mobile-First Responsive Design */
+    * {
+      box-sizing: border-box;
+    }
+    
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 30px;
+      right: 30px;
+      background-color: #25d366;
+      color: #fff;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 3px #999;
+      z-index: 100;
+      transition: all 0.3s ease;
+    }
+    
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      background-color: #20c55a;
+    }
+    
+    .whatsapp-float i {
+      margin-top: 16px;
+    }
+    
+    /* Social Proof Bar */
+    .social-proof-bar {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-weight: bold;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .social-proof-bar .badge {
+      display: inline-block;
+      margin: 0 15px;
+      padding: 5px 15px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 20px;
+      font-size: 14px;
+    }
+    
+    /* Header adjustment for social proof bar */
+    header {
+      margin-top: 50px;
+    }
+    
+    /* Enhanced Stats Section */
+    .enhanced-stats {
+      background: #f8f9fa;
+      padding: 60px 0;
+      margin: 40px 0;
+    }
+    
+    .stat-card {
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      margin-bottom: 30px;
+    }
+    
+    .stat-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .stat-card i {
+      font-size: 50px;
+      color: #667eea;
+      margin-bottom: 20px;
+    }
+    
+    .stat-card h3 {
+      font-size: 48px;
+      font-weight: bold;
+      color: #333;
+      margin: 10px 0;
+    }
+    
+    .stat-card p {
+      font-size: 18px;
+      color: #666;
+    }
+    
+    /* Client Logos Section */
+    .client-logos {
+      background: white;
+      padding: 60px 0;
+      text-align: center;
+    }
+    
+    .client-logos h3 {
+      font-size: 32px;
+      margin-bottom: 40px;
+      color: #333;
+    }
+    
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 30px;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .logo-item {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+    
+    .logo-item:hover {
+      background: #e9ecef;
+      transform: scale(1.05);
+    }
+    
+    /* CTA Buttons Enhancement */
+    .cta-section {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 60px 0;
+      text-align: center;
+      color: white;
+    }
+    
+    .cta-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      padding: 15px 30px;
+      background: white;
+      color: #667eea;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    
+    .cta-button.primary {
+      background: #25d366;
+      color: white;
+    }
+    
+    /* Testimonials Section */
+    .testimonials {
+      background: #f8f9fa;
+      padding: 60px 0;
+    }
+    
+    .testimonial-card {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+    
+    .testimonial-card .quote {
+      font-style: italic;
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    
+    .testimonial-card .author {
+      font-weight: bold;
+      color: #333;
+    }
+    
+    .testimonial-card .designation {
+      color: #666;
+      font-size: 14px;
+    }
+    
+    /* Course Features */
+    .course-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin: 40px 0;
+    }
+    
+    .feature-card {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    
+    .feature-card i {
+      font-size: 40px;
+      color: #667eea;
+      margin-bottom: 20px;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .social-proof-bar .badge {
+        display: block;
+        margin: 5px 0;
+      }
+      
+      header {
+        margin-top: 120px;
+      }
+      
+      .stat-card h3 {
+        font-size: 36px;
+      }
+      
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+      }
+      
+      .whatsapp-float i {
+        margin-top: 12px;
+        font-size: 26px;
+      }
+    }
+    
+    /* Performance Optimizations */
+    img {
+      loading: lazy;
+      max-width: 100%;
+      height: auto;
+    }
+    
+    /* Accessibility */
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    
+    /* Skip to main content link */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #000;
+      color: white;
+      padding: 8px;
+      text-decoration: none;
+      border-radius: 0 0 4px 0;
+    }
+    
+    .skip-link:focus {
+      top: 0;
+    }
+  </style>
+  
+  <!-- Preload critical assets -->
+  <link rel="preload" href="css/base.css" as="style">
+  <link rel="preload" href="css/main.css" as="style">
+  
   <script src="js/modernizr.js"></script>
   <script src="js/pace.min.js"></script>
   
-  <!-- Google Analytics (primary) -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121333930-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -33,522 +387,519 @@
   </script>
 </head>
 <body id="top">
+  <!-- Skip to main content -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+  
+  <!-- Social Proof Bar -->
+  <div class="social-proof-bar">
+    <span class="badge"><i class="fas fa-users"></i> 20,000+ Students Trained</span>
+    <span class="badge"><i class="fas fa-building"></i> Trusted by Meta, TATA Steel, Toyota</span>
+    <span class="badge"><i class="fas fa-certificate"></i> Google Certified Developer</span>
+  </div>
+  
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/918148580586?text=Hi%20Ranjith,%20I'm%20interested%20in%20Android%20training" 
+     class="whatsapp-float" 
+     target="_blank"
+     aria-label="Contact on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  
   <!-- HEADER -->
   <header>
     <div class="top-bar">
       <div class="logo">
         <a href="index.html">AndroidManifester</a>
       </div>
-      <nav id="main-nav">
+      <nav id="main-nav" role="navigation">
+        <button class="menu-toggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <ul class="navigation">
           <li class="current"><a href="#intro">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- INTRO SECTION -->
-  <section id="intro">
-    <div class="intro-overlay"></div>
-    <div class="intro-content">
+  <main id="main">
+    <!-- INTRO SECTION -->
+    <section id="intro">
+      <div class="intro-overlay"></div>
+      <div class="intro-content">
+        <div class="row">
+          <div class="col-twelve">
+            <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/56248985" 
+                 alt="Google Certified Android Developer Badge" 
+                 width="300" 
+                 height="300"
+                 loading="eager" />
+            <h1>Learn Mobile App Development from Google Certified Expert</h1>
+            <h2>Android • iOS • Flutter Training with 12+ Years Experience</h2>
+            <p class="intro-position">
+              <span>Google Certified Android Developer</span>
+              <span>Trained 20,000+ Students</span>
+              <span>Corporate Trainer for Fortune 500</span>
+            </p>
+            <div class="cta-buttons">
+              <a class="cta-button primary" href="https://wa.me/918148580586?text=Hi%20Ranjith,%20I'm%20interested%20in%20Android%20training" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp Now
+              </a>
+              <a class="cta-button" href="#contact">Get Free Consultation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="intro-social">
+        <li><a href="https://www.facebook.com/androidmanifester" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="https://www.instagram.com/ranjithstar256/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://in.linkedin.com/in/androidranjith" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://github.com/ranjithstar256" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+      </ul>
+    </section>
+
+    <!-- ENHANCED STATS SECTION -->
+    <section class="enhanced-stats">
+      <div class="container">
+        <div class="row">
+          <div class="col-twelve">
+            <h2 style="text-align: center; margin-bottom: 50px;">Why Choose AndroidManifester?</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-three">
+            <div class="stat-card">
+              <i class="fas fa-users"></i>
+              <h3>20,000+</h3>
+              <p>Students Trained</p>
+            </div>
+          </div>
+          <div class="col-three">
+            <div class="stat-card">
+              <i class="fas fa-building"></i>
+              <h3>50+</h3>
+              <p>Corporate Clients</p>
+            </div>
+          </div>
+          <div class="col-three">
+            <div class="stat-card">
+              <i class="fas fa-clock"></i>
+              <h3>12+</h3>
+              <p>Years Experience</p>
+            </div>
+          </div>
+          <div class="col-three">
+            <div class="stat-card">
+              <i class="fas fa-certificate"></i>
+              <h3>100%</h3>
+              <p>Job Placement</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENT LOGOS SECTION -->
+    <section class="client-logos">
+      <div class="container">
+        <h3>Trusted by Leading Companies</h3>
+        <div class="logo-grid">
+          <div class="logo-item">
+            <strong>Meta (Facebook)</strong>
+            <p style="font-size: 12px;">Coursera Content</p>
+          </div>
+          <div class="logo-item">
+            <strong>TATA Steel</strong>
+            <p style="font-size: 12px;">Flutter Training</p>
+          </div>
+          <div class="logo-item">
+            <strong>Toyota Connect</strong>
+            <p style="font-size: 12px;">Mobile Development</p>
+          </div>
+          <div class="logo-item">
+            <strong>CodingDojo</strong>
+            <p style="font-size: 12px;">iOS Training</p>
+          </div>
+          <div class="logo-item">
+            <strong>IBM India</strong>
+            <p style="font-size: 12px;">iOS Development</p>
+          </div>
+          <div class="logo-item">
+            <strong>IIT Hyderabad</strong>
+            <p style="font-size: 12px;">Workshops</p>
+          </div>
+          <div class="logo-item">
+            <strong>TCS ION</strong>
+            <p style="font-size: 12px;">Android Training</p>
+          </div>
+          <div class="logo-item">
+            <strong>Sify Technologies</strong>
+            <p style="font-size: 12px;">Corporate Training</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+      <div class="row section-intro">
+        <div class="col-twelve">
+          <h2>About K.P. Ranjith Kumar</h2>
+          <h3>Google Certified Android Developer & Expert Trainer</h3>
+          <div class="intro-info">
+            <img src="images/profile-pic.jpg" alt="K P Ranjith Kumar - Android Trainer" loading="lazy">
+            <p class="lead">
+              With over 12 years of dedicated experience in mobile app development, I've trained more than 20,000 students and delivered corporate training for Fortune 500 companies including Meta (Facebook), TATA Steel, Toyota Connect, IBM, and more. As a Google Certified Android Developer, I specialize in Android, iOS, and Flutter development, helping professionals and students master mobile technologies through practical, industry-focused training.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Course Features -->
       <div class="row">
         <div class="col-twelve">
-          <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/56248985" 
-               alt="Google Certified Android Developer Badge" width="300" height="300" />
-          <h1>Welcome to AndroidManifester</h1>
-          <h2>Your Trusted Partner in Android Development & Training</h2>
-          <p class="intro-position">
-            <span>Google Certified Android Developer</span>
-            <span>Expert Trainer & Consultant</span>
-            <span>Innovative App Developer</span>
-          </p>
-          <a class="button stroke" href="#about" title="Learn More About Me">Learn More</a>
-          <a class="button stroke" href="https://api.whatsapp.com/send?phone=918148580586" title="Contact via WhatsApp">+91 81485 80586</a>
-          <a class="button stroke" href="mailto:ranjithpsundar@gmail.com" title="Email Me">ranjithpsundar@gmail.com</a>
+          <h3 style="text-align: center; margin-bottom: 40px;">What Makes Our Training Different?</h3>
+          <div class="course-features">
+            <div class="feature-card">
+              <i class="fas fa-chalkboard-teacher"></i>
+              <h4>Live Interactive Sessions</h4>
+              <p>Learn directly from industry expert with real-time doubt clearing</p>
+            </div>
+            <div class="feature-card">
+              <i class="fas fa-project-diagram"></i>
+              <h4>Real-World Projects</h4>
+              <p>Build production-ready apps with hands-on project experience</p>
+            </div>
+            <div class="feature-card">
+              <i class="fas fa-certificate"></i>
+              <h4>Industry Certification</h4>
+              <p>Get certified and job-ready with our placement assistance</p>
+            </div>
+            <div class="feature-card">
+              <i class="fas fa-users"></i>
+              <h4>Small Batch Size</h4>
+              <p>Personalized attention with maximum 10 students per batch</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <ul class="intro-social">
-      <li><a href="https://www.facebook.com/androidmanifester" target="_blank"><i class="fa fa-facebook"></i></a></li>
-      <li><a href="https://www.instagram.com/ranjithstar256/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-      <li><a href="https://twitter.com/ran_jiith" target="_blank"><i class="fa fa-twitter"></i></a></li>
-      <!-- Add additional social links as needed -->
-    </ul>
-  </section>
+      
+      <div class="row about-content">
+        <div class="col-six tab-full">
+          <h3>Professional Expertise</h3>
+          <ul class="info-list">
+            <li><strong>Full Name:</strong> <span>K P Ranjith Kumar</span></li>
+            <li><strong>Certification:</strong> <span>Google Certified Android Developer</span></li>
+            <li><strong>Experience:</strong> <span>12+ Years in Mobile Development</span></li>
+            <li><strong>Students Trained:</strong> <span>20,000+ Professionals</span></li>
+            <li><strong>Specialization:</strong> <span>Android, iOS, Flutter, React Native</span></li>
+            <li><strong>Email:</strong> <span><a href="mailto:ranjithpsundar@gmail.com">ranjithpsundar@gmail.com</a></span></li>
+            <li><strong>LinkedIn:</strong> <a href="https://in.linkedin.com/in/androidranjith" target="_blank">Connect on LinkedIn</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/ranjithstar256" target="_blank">View Projects</a></li>
+          </ul>
+        </div>
+        <div class="col-six tab-full">
+          <h3>Technical Skills</h3>
+          <ul class="skill-bars">
+            <li>
+              <div class="progress percent95"><span>95%</span></div>
+              <strong>Android Development (Java/Kotlin)</strong>
+            </li>
+            <li>
+              <div class="progress percent90"><span>90%</span></div>
+              <strong>iOS Development (Swift)</strong>
+            </li>
+            <li>
+              <div class="progress percent95"><span>95%</span></div>
+              <strong>Flutter & Dart</strong>
+            </li>
+            <li>
+              <div class="progress percent85"><span>85%</span></div>
+              <strong>React Native</strong>
+            </li>
+            <li>
+              <div class="progress percent90"><span>90%</span></div>
+              <strong>Firebase & Cloud Services</strong>
+            </li>
+            <li>
+              <div class="progress percent85"><span>85%</span></div>
+              <strong>REST APIs & Backend Integration</strong>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-  <!-- ABOUT SECTION -->
-  <section id="about">
-    <div class="row section-intro">
-      <div class="col-twelve">
-        <h2>About Me</h2>
-        <h3>Expert Android Developer & Trainer</h3>
-        <div class="intro-info">
-          <img src="images/profile-pic.jpg" alt="Profile Picture of K P Ranjith">
-          <p class="lead">
-            With over 11 years of dedicated experience in Android development, I have committed my career to building innovative mobile solutions and empowering professionals through expert training. At AndroidManifester, my mission is to deliver excellence in every project and transform the way businesses leverage Android technology.
-          </p>
+    <!-- SERVICES SECTION -->
+    <section id="services">
+      <div class="overlay"></div>
+      <div class="row section-intro">
+        <div class="col-twelve">
+          <h2>Our Services</h2>
+          <h3>Complete Mobile Development Solutions</h3>
         </div>
       </div>
-    </div>
-    <div class="row about-content">
-      <div class="col-six tab-full">
-        <h3>Professional Profile</h3>
-        <p>Over 11 years of proven expertise in Android development, training, and consultancy.</p>
-        <ul class="info-list">
-          <li><strong>Full Name:</strong> <span>K P Ranjith Kumar</span></li>
-          <li><strong>Date of Birth:</strong> <span>October 2</span></li>
-          <li><strong>Role:</strong> <span>Founder, CEO, Senior Android Developer & Trainer</span></li>
-          <li>
-            <strong>Website:</strong>
-            <span>
-              <a class="LI-simple-link" href="https://www.androidmanifester.in" target="_blank">www.androidmanifester.in</a>,
-              <a class="LI-simple-link" href="https://www.facebook.com/AndroidManifester" target="_blank">facebook.com/AndroidManifester</a>,
-              <a class="LI-simple-link" href="https://androidmanifester.business.site" target="_blank">androidmanifester.business.site</a>
-            </span>
-          </li>
-          <li><strong>Email:</strong> <span>ranjithpsundar@gmail.com</span></li>
-          <li><strong>LinkedIn:</strong> <a href="https://in.linkedin.com/in/k-p-ranjith-kumar-89780017" target="_blank">K P Ranjith Kumar</a></li>
-        </ul>
+      <div class="row services-content">
+        <div class="services-list">
+          <div class="service">
+            <span class="icon"><i class="fas fa-graduation-cap"></i></span>
+            <div class="service-content">
+              <h4>Professional Training Programs</h4>
+              <p>Comprehensive courses in Android, iOS, and Flutter with hands-on projects and certification</p>
+            </div>
+          </div>
+          <div class="service">
+            <span class="icon"><i class="fas fa-building"></i></span>
+            <div class="service-content">
+              <h4>Corporate Training</h4>
+              <p>Customized training solutions for companies to upskill their teams in mobile technologies</p>
+            </div>
+          </div>
+          <div class="service">
+            <span class="icon"><i class="fas fa-laptop-code"></i></span>
+            <div class="service-content">
+              <h4>Online Classes</h4>
+              <p>Live interactive online sessions with recorded backups for flexible learning</p>
+            </div>
+          </div>
+          <div class="service">
+            <span class="icon"><i class="fas fa-mobile-alt"></i></span>
+            <div class="service-content">
+              <h4>App Development</h4>
+              <p>Custom mobile app development for Android and iOS platforms</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-six tab-full">
-        <h3>Skills & Expertise</h3>
-        <p>I provide a full spectrum of services that empower your Android projects and training initiatives:</p>
-        <ul class="skill-bars">
-          <li>
-            <div class="progress percent95"><span>95%</span></div>
-            <strong>Android App Development</strong>
-          </li>
-          <li>
-            <div class="progress percent99"><span>99%</span></div>
-            <strong>Professional Android Training</strong>
-          </li>
-          <li>
-            <div class="progress percent85"><span>85%</span></div>
-            <strong>Database Management (SQLite, MySQL)</strong>
-          </li>
-          <li>
-            <div class="progress percent95"><span>95%</span></div>
-            <strong>Android Studio & Kotlin</strong>
-          </li>
-          <li>
-            <div class="progress percent75"><span>75%</span></div>
-            <strong>Software Testing & Debugging</strong>
-          </li>
-          <li>
-            <div class="progress percent85"><span>85%</span></div>
-            <strong>Web Technologies (HTML, CSS, JavaScript)</strong>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="row button-section">
-      <div class="col-twelve">
-        <a href="#contact" title="Hire Me" class="button stroke">Hire Me</a>
-        <a href="Ranjith_MobileApp_with6YrsExp.pdf" title="Download CV" class="button button-primary">Download CV</a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- RESUME / EXPERIENCE SECTION -->
-  <section id="resume" class="grey-section">
-    <div class="row section-intro">
-      <div class="col-twelve">
-        <h2>My Journey & Experience</h2>
-        <p class="lead">
-          Discover my professional journey through roles that have shaped my expertise in Android development and training.
-        </p>
+    <!-- TESTIMONIALS SECTION -->
+    <section id="testimonials" class="testimonials">
+      <div class="row section-intro">
+        <div class="col-twelve">
+          <h2>What Our Students Say</h2>
+          <h3>Success Stories from Our Alumni</h3>
+        </div>
       </div>
-    </div>
-    <div class="row resume-timeline">
-      <div class="col-twelve resume-header">
-        <h3>Work Experience</h3>
-      </div>
-      <div class="timeline-wrap">
-        <div class="timeline-block">
-          <div class="timeline-ico"><i class="fa fa-briefcase"></i></div>
-          <div class="timeline-header">
-            <h4>Founder & CEO, Senior Android Developer & Trainer</h4>
-            <p>September 2016 - Present</p>
-          </div>
-          <div class="timeline-content">
-            <h5>AndroidManifester</h5>
-            <p>
-              Established a premier platform delivering comprehensive Android solutions—from custom app development to world-class training and consultancy.
-            </p>
+      <div class="row">
+        <div class="col-four">
+          <div class="testimonial-card">
+            <p class="quote">"Ranjith has good knowledge and delivery skills. His approach is in-depth oriented and has excellent crowd management skills."</p>
+            <p class="author">Nanditha Shetty</p>
+            <p class="designation">Manager, MobiGnosis</p>
           </div>
         </div>
-        <div class="timeline-block">
-          <div class="timeline-ico"><i class="fa fa-briefcase"></i></div>
-          <div class="timeline-header">
-            <h4>Android Corporate Trainer</h4>
-            <p>July 2015 - September 2016</p>
-          </div>
-          <div class="timeline-content">
-            <h5>Accord Info Matrix</h5>
-            <p>
-              Delivered industry-leading training at one of Chennai’s top institutes, empowering professionals with advanced Android skills.
-            </p>
+        <div class="col-four">
+          <div class="testimonial-card">
+            <p class="quote">"Ranjith is a skilled Android developer and an excellent teacher who can explain things understandably. Learning Android from Ranjith sir's class was a knowledgeable experience."</p>
+            <p class="author">Jyothish Kumar A</p>
+            <p class="designation">Data Analyst, S4Carlisle Publishing</p>
           </div>
         </div>
-        <div class="timeline-block">
-          <div class="timeline-ico"><i class="fa fa-briefcase"></i></div>
-          <div class="timeline-header">
-            <h4>Android Developer</h4>
-            <p>August 2014 - July 2015</p>
-          </div>
-          <div class="timeline-content">
-            <h5>Zee Zipper Industries</h5>
-            <p>
-              Contributed to innovative Android solutions in a dynamic industrial environment.
-            </p>
-          </div>
-        </div>
-        <div class="timeline-block">
-          <div class="timeline-ico"><i class="fa fa-briefcase"></i></div>
-          <div class="timeline-header">
-            <h4>Android Developer & Trainer</h4>
-            <p>September 2011 - July 2013</p>
-          </div>
-          <div class="timeline-content">
-            <h5>Arcus InfoTech Pvt. Ltd</h5>
-            <p>
-              Launched my career by imparting Android knowledge and developing robust applications, laying a strong foundation for my professional growth.
-            </p>
+        <div class="col-four">
+          <div class="testimonial-card">
+            <p class="quote">"Ranjith's feedback from trainees always was excellent. He engaged well with trainees, took care of their attention span, and coached individually."</p>
+            <p class="author">Swapnil Pande</p>
+            <p class="designation">Senior Programme Manager, Mindcrest</p>
           </div>
         </div>
       </div>
-    </div>
-    <div class="row resume-timeline">
-      <div class="col-twelve resume-header">
-        <h3>Education</h3>
-      </div>
-      <div class="timeline-wrap">
-        <div class="timeline-block">
-          <div class="timeline-ico"><i class="fa fa-graduation-cap"></i></div>
-          <div class="timeline-header">
-            <h4>Bachelor's Degree in Instrumentation Engineering</h4>
-            <p>July 2007 - April 2011</p>
-          </div>
-          <div class="timeline-content">
-            <h5>M. Kumarasamy College of Engineering, Karur</h5>
-            <p>
-              A prestigious institution in Tamil Nadu that provided me with a robust technical foundation.
-            </p>
-          </div>
-        </div>
-        <div class="timeline-block">
-          <div class="timeline-ico"><i class="fa fa-graduation-cap"></i></div>
-          <div class="timeline-header">
-            <h4>Higher Secondary Certificate (HSC)</h4>
-            <p>May 2005 - June 2007</p>
-          </div>
-          <div class="timeline-content">
-            <h5>P.A. Vidhaya Bhavan Higher Secondary School, Karur</h5>
-            <p>
-              Built a strong academic base that paved the way for my future technical studies.
-            </p>
-          </div>
-        </div>
-        <div class="timeline-block">
-          <div class="timeline-ico"><i class="fa fa-graduation-cap"></i></div>
-          <div class="timeline-header">
-            <h4>SSLC</h4>
-            <p>May 2004 - June 2005</p>
-          </div>
-          <div class="timeline-content">
-            <h5>Municipality Higher Secondary School, Karur</h5>
-            <p>
-              The beginning of my educational journey, marked by a commitment to excellence.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PORTFOLIO SECTION -->
-  <section id="portfolio">
-    <div class="row section-intro">
-      <div class="col-twelve">
-        <h2>Our Portfolio</h2>
-        <h3>Showcasing Innovation & Excellence</h3>
-        <p class="lead">
-          Explore a curated selection of projects that highlight our expertise in Android solutions and transformative training programs.
-        </p>
-      </div>
-    </div>
-    <div class="row portfolio-content">
-      <div class="col-twelve">
-        <div id="folio-wrapper" class="portfolio-grid">
-          <div class="folio-item">
-            <div class="item-wrap">
-              <img src="images/Collegeworkshop.jpg" alt="Engineering College Workshop">
-              <a href="#modal-01" class="overlay">
-                <div class="folio-item-info">
-                  <h3>Engineering College Workshop</h3>
-                  <span>Educational Event</span>
-                </div>
-              </a>
-            </div>
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+      <div class="row">
+        <div class="col-twelve">
+          <h2>Ready to Start Your Mobile Development Journey?</h2>
+          <p style="font-size: 20px; margin-bottom: 30px;">Join 20,000+ successful students who transformed their careers</p>
+          <div class="cta-buttons">
+            <a href="https://wa.me/918148580586?text=Hi%20Ranjith,%20I%20want%20to%20enroll%20in%20Android%20training" class="cta-button primary">
+              <i class="fab fa-whatsapp"></i> Enroll Now via WhatsApp
+            </a>
+            <a href="tel:+918148580586" class="cta-button">
+              <i class="fas fa-phone"></i> Call: +91 81485 80586
+            </a>
+            <a href="https://booking.appointy.com/AndroidManifester" class="cta-button" target="_blank">
+              <i class="fas fa-calendar"></i> Book Appointment
+            </a>
           </div>
-          <div class="folio-item">
-            <div class="item-wrap">
-              <img src="images/Collegewrksh.jpg" alt="Android Seminars">
-              <a href="#modal-02" class="overlay">
-                <div class="folio-item-info">
-                  <h3>Android Seminars</h3>
-                  <span>Expert Lectures</span>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="folio-item">
-            <div class="item-wrap">
-              <img src="images/Collegwr.jpg" alt="Corporate Trainings">
-              <a href="#modal-03" class="overlay">
-                <div class="folio-item-info">
-                  <h3>Corporate Trainings</h3>
-                  <span>Enterprise Solutions</span>
-                </div>
-              </a>
-            </div>
-          </div>
-          <!-- Add more portfolio items as needed -->
         </div>
       </div>
-    </div>
-    <!-- Modal Popups -->
-    <div id="modal-01" class="popup-modal">
-      <div class="media">
-        <img src="images/Collegeworkshop.jpg" alt="Engineering College Workshop">
-      </div>
-      <div class="description-box">
-        <h4>Engineering College Workshop</h4>
-        <p>
-          Interactive workshops delivered at top engineering colleges to inspire and educate the next generation of Android developers.
-        </p>
-        <div class="categories">Education, Training</div>
-      </div>
-      <div class="link-box">
-        <a href="https://www.androidmanifester.in/workshops" target="_blank">More Details</a>
-        <a href="#" class="popup-modal-dismiss">Close</a>
-      </div>
-    </div>
-    <div id="modal-02" class="popup-modal">
-      <div class="media">
-        <img src="images/Collegewrksh.jpg" alt="Android Seminars">
-      </div>
-      <div class="description-box">
-        <h4>Android Seminars</h4>
-        <p>
-          Engaging seminars and guest lectures on advanced Android topics at prestigious institutions.
-        </p>
-        <div class="categories">Seminars, Public Speaking</div>
-      </div>
-      <div class="link-box">
-        <a href="https://www.androidmanifester.in/seminars" target="_blank">More Details</a>
-        <a href="#" class="popup-modal-dismiss">Close</a>
-      </div>
-    </div>
-    <div id="modal-03" class="popup-modal">
-      <div class="media">
-        <img src="images/Collegwr.jpg" alt="Corporate Trainings">
-      </div>
-      <div class="description-box">
-        <h4>Corporate Trainings</h4>
-        <p>
-          Bespoke training programs designed to enhance the Android proficiency of corporate teams.
-        </p>
-        <div class="categories">Corporate Training, Consultancy</div>
-      </div>
-      <div class="link-box">
-        <a href="https://www.androidmanifester.in/corporate-training" target="_blank">More Details</a>
-        <a href="#" class="popup-modal-dismiss">Close</a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SERVICES SECTION -->
-  <section id="services">
-    <div class="overlay"></div>
-    <div class="row section-intro">
-      <div class="col-twelve">
-        <h2>Services</h2>
-        <h3>What We Offer</h3>
-        <p class="lead">
-          From custom Android app development to comprehensive training and strategic consultancy, our services are designed to empower your business.
-        </p>
-      </div>
-    </div>
-    <div class="row services-content">
-      <div class="services-list">
-        <div class="service">
-          <span class="icon"><i class="icon-mobile"></i></span>
-          <div class="service-content">
-            <h4>Custom Android Development</h4>
-            <p>
-              High-performance, scalable Android applications tailored to your business needs.
-            </p>
-          </div>
-        </div>
-        <div class="service">
-          <span class="icon"><i class="icon-education"></i></span>
-          <div class="service-content">
-            <h4>Corporate & Classroom Training</h4>
-            <p>
-              In-person and online training sessions to upskill your team with the latest Android technologies.
-            </p>
-          </div>
-        </div>
-        <div class="service">
-          <span class="icon"><i class="icon-strategy"></i></span>
-          <div class="service-content">
-            <h4>Android Consultancy</h4>
-            <p>
-              Expert advice to help you leverage Android technology for maximum business impact.
-            </p>
-          </div>
-        </div>
-        <div class="service">
-          <span class="icon"><i class="icon-support"></i></span>
-          <div class="service-content">
-            <h4>Comprehensive Support</h4>
-            <p>
-              Ongoing maintenance and support services to keep your Android applications at the cutting edge.
-            </p>
-          </div>
+    <!-- PORTFOLIO SECTION -->
+    <section id="portfolio">
+      <div class="row section-intro">
+        <div class="col-twelve">
+          <h2>Our Portfolio</h2>
+          <h3>Training Programs & Workshops</h3>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- STATS SECTION -->
-  <section id="stats" class="count-up">
-    <div class="row">
-      <div class="col-twelve">
-        <div class="stats-list">
-          <div class="stat">
-            <div class="icon-part"><i class="icon-pencil-ruler"></i></div>
-            <h3 class="stat-count">15</h3>
-            <h5 class="stat-title">Projects Completed</h5>
-          </div>
-          <div class="stat">
-            <div class="icon-part"><i class="icon-users"></i></div>
-            <h3 class="stat-count">2500</h3>
-            <h5 class="stat-title">Happy Clients</h5>
-          </div>
-          <div class="stat">
-            <div class="icon-part"><i class="icon-badge"></i></div>
-            <h3 class="stat-count">11</h3>
-            <h5 class="stat-title">Years of Experience</h5>
-          </div>
-          <div class="stat">
-            <div class="icon-part"><i class="icon-light-bulb"></i></div>
-            <h3 class="stat-count">12</h3>
-            <h5 class="stat-title">Technologies Mastered</h5>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT SECTION -->
-  <section id="contact">
-    <div class="row section-intro">
-      <div class="col-twelve">
-        <h2>Contact Me</h2>
-        <h3>Let's Collaborate on Your Next Project</h3>
-        <p class="lead">
-          Get in touch today to discuss your Android development or training needs and start transforming your digital experience.
-        </p>
-      </div>
-    </div>
-    <div class="row contact-form">
-      <div class="col-twelve">
-        <form name="contactForm" id="contactForm" method="post" action="/inc/sendEmail.php">
-          <fieldset>
-            <div class="form-field">
-              <input name="contactName" type="text" id="contactName" placeholder="Your Name" required minlength="2">
-            </div>
-            <div class="form-field">
-              <input name="contactEmail" type="email" id="contactEmail" placeholder="Your Email" required>
-            </div>
-            <div class="form-field">
-              <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject">
-            </div>
-            <div class="form-field">
-              <textarea name="contactMessage" id="contactMessage" placeholder="Your Message" rows="10" cols="50" required></textarea>
-            </div>
-            <div class="form-field">
-              <button class="submitform" type="submit">Send Message</button>
-              <div id="submit-loader">
-                <div class="text-loader">Sending...</div>
-                <div class="s-loader">
-                  <div class="bounce1"></div>
-                  <div class="bounce2"></div>
-                  <div class="bounce3"></div>
-                </div>
+      <div class="row portfolio-content">
+        <div class="col-twelve">
+          <div id="folio-wrapper" class="portfolio-grid">
+            <div class="folio-item">
+              <div class="item-wrap">
+                <img src="images/Collegeworkshop.jpg" alt="Engineering College Workshop" loading="lazy">
+                <a href="#modal-01" class="overlay">
+                  <div class="folio-item-info">
+                    <h3>IIT Workshops</h3>
+                    <span>Technical Training</span>
+                  </div>
+                </a>
               </div>
             </div>
-          </fieldset>
-        </form>
-        <div id="message-warning"></div>
-        <div id="message-success">
-          <i class="fa fa-check"></i> Your message has been sent. Thank you!
+            <div class="folio-item">
+              <div class="item-wrap">
+                <img src="images/Collegewrksh.jpg" alt="Corporate Training Sessions" loading="lazy">
+                <a href="#modal-02" class="overlay">
+                  <div class="folio-item-info">
+                    <h3>Corporate Training</h3>
+                    <span>Fortune 500 Companies</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="folio-item">
+              <div class="item-wrap">
+                <img src="images/Collegwr.jpg" alt="Student Batch Training" loading="lazy">
+                <a href="#modal-03" class="overlay">
+                  <div class="folio-item-info">
+                    <h3>Student Batches</h3>
+                    <span>Classroom Training</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="row contact-info">
-      <div class="col-four tab-full">
-        <div class="icon"><i class="icon-pin"></i></div>
-        <h5>Our Location</h5>
-        <p>
-          AndroidManifester<br>
-          27/2 Sardar Patel Road,<br>
-          Guindy, Chennai-32, Tamil Nadu<br>
-          600015, India
-        </p>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+      <div class="row section-intro">
+        <div class="col-twelve">
+          <h2>Contact Me</h2>
+          <h3>Start Your Learning Journey Today</h3>
+          <p class="lead">
+            Get in touch for course details, batch schedules, or corporate training requirements
+          </p>
+        </div>
       </div>
-      <div class="col-four tab-full">
-        <div class="icon"><i class="icon-mail"></i></div>
-        <h5>Email</h5>
-        <p><a href="mailto:ranjithpsundar@gmail.com">ranjithpsundar@gmail.com</a></p>
+      <div class="row contact-form">
+        <div class="col-twelve">
+          <form name="contactForm" id="contactForm" method="post" action="/inc/sendEmail.php">
+            <fieldset>
+              <div class="form-field">
+                <input name="contactName" type="text" id="contactName" placeholder="Your Name" required minlength="2" aria-label="Your Name">
+              </div>
+              <div class="form-field">
+                <input name="contactEmail" type="email" id="contactEmail" placeholder="Your Email" required aria-label="Your Email">
+              </div>
+              <div class="form-field">
+                <input name="contactPhone" type="tel" id="contactPhone" placeholder="Your Phone Number" required aria-label="Your Phone">
+              </div>
+              <div class="form-field">
+                <select name="contactCourse" id="contactCourse" required aria-label="Select Course">
+                  <option value="">Select Course</option>
+                  <option value="android">Android Development</option>
+                  <option value="ios">iOS Development</option>
+                  <option value="flutter">Flutter Development</option>
+                  <option value="corporate">Corporate Training</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <textarea name="contactMessage" id="contactMessage" placeholder="Your Message" rows="8" required aria-label="Your Message"></textarea>
+              </div>
+              <div class="form-field">
+                <button class="submitform" type="submit">Send Message</button>
+                <div id="submit-loader">
+                  <div class="text-loader">Sending...</div>
+                  <div class="s-loader">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+          <div id="message-warning"></div>
+          <div id="message-success">
+            <i class="fa fa-check"></i> Your message has been sent. Thank you!
+          </div>
+        </div>
       </div>
-      <div class="col-four tab-full">
-        <div class="icon"><i class="icon-phone"></i></div>
-        <h5>Call Us</h5>
-        <p>
-          Mobile: <a href="tel:+918148580586">+91 81485 80586</a><br>
-          Office: (044) 48574241
-        </p>
+      <div class="row contact-info">
+        <div class="col-four tab-full">
+          <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+          <h5>Training Center</h5>
+          <p>
+            AndroidManifester<br>
+            27/2 Sardar Patel Road,<br>
+            Guindy, Chennai-32<br>
+            Tamil Nadu, India
+          </p>
+        </div>
+        <div class="col-four tab-full">
+          <div class="icon"><i class="fas fa-envelope"></i></div>
+          <h5>Email & Social</h5>
+          <p>
+            <a href="mailto:ranjithpsundar@gmail.com">ranjithpsundar@gmail.com</a><br>
+            <a href="https://github.com/ranjithstar256" target="_blank">GitHub: ranjithstar256</a><br>
+            <a href="https://in.linkedin.com/in/androidranjith" target="_blank">LinkedIn: androidranjith</a>
+          </p>
+        </div>
+        <div class="col-four tab-full">
+          <div class="icon"><i class="fas fa-phone"></i></div>
+          <h5>Quick Contact</h5>
+          <p>
+            Mobile: <a href="tel:+918148580586">+91 81485 80586</a><br>
+            WhatsApp: <a href="https://wa.me/918148580586" target="_blank">+91 81485 80586</a><br>
+            Office: (044) 48574241
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <h3 style="text-align:center;">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15549.539708448172!2d80.224102!3d13.011142!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8af4d80b91bf1678!2sAndroidManifester!5e0!3m2!1sen!2sin!4v1531934935810" 
-                width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-      </h3>
-    </div>
-  </section>
+      <div class="row">
+        <div class="col-twelve">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15549.539708448172!2d80.224102!3d13.011142!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8af4d80b91bf1678!2sAndroidManifester!5e0!3m2!1sen!2sin!4v1531934935810" 
+                  width="100%" 
+                  height="450" 
+                  frameborder="0" 
+                  style="border:0" 
+                  allowfullscreen
+                  title="AndroidManifester Location Map"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- FOOTER -->
   <footer>
-    <script src="js/pa-embed-player.min.js" async></script>
-    <div class="pa-embed-player" style="width:50%; height:480px; display:none;" 
-         data-link="https://goo.gl/photos/MJZK7LZEY7VC7prn6" 
-         data-title="My Life with Android ♥" 
-         data-description="162 new photos added to shared album">
-      <!-- Embedded album (if used) -->
-    </div>
     <div class="row">
       <div class="col-twelve">
+        <div class="footer-content">
+          <h3>AndroidManifester</h3>
+          <p>Empowering developers since 2011</p>
+          <ul class="footer-social">
+            <li><a href="https://www.facebook.com/androidmanifester" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/ranjithstar256/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://in.linkedin.com/in/androidranjith" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://github.com/ranjithstar256" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://wa.me/918148580586" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+          </ul>
+        </div>
         <div class="copyright">
-          <span>© 2023 AndroidManifester. All Rights Reserved.</span>
-          <span>Designed and Developed by <a href="https://www.androidmanifester.in" target="_blank">K P Ranjith</a></span>
+          <span>© <span id="currentYear"></span> AndroidManifester. All Rights Reserved.</span>
+          <span>Designed by <a href="https://www.androidmanifester.in" target="_blank">K P Ranjith</a></span>
         </div>
       </div>
       <div id="go-top">
@@ -556,6 +907,61 @@
       </div>
     </div>
   </footer>
+
+  <!-- Modal Popups -->
+  <div id="modal-01" class="popup-modal mfp-hide">
+    <div class="media">
+      <img src="images/Collegeworkshop.jpg" alt="IIT Workshop">
+    </div>
+    <div class="description-box">
+      <h4>IIT & Engineering College Workshops</h4>
+      <p>
+        Conducted workshops at IIT Hyderabad, IIT Chennai, and 50+ engineering colleges across India. 
+        Specialized in hands-on Android development workshops with real-world project implementation.
+      </p>
+      <div class="categories">Education, Technical Training</div>
+    </div>
+    <div class="link-box">
+      <a href="https://wa.me/918148580586?text=I'm%20interested%20in%20college%20workshops" target="_blank">Inquire Now</a>
+      <a href="#" class="popup-modal-dismiss">Close</a>
+    </div>
+  </div>
+
+  <div id="modal-02" class="popup-modal mfp-hide">
+    <div class="media">
+      <img src="images/Collegewrksh.jpg" alt="Corporate Training">
+    </div>
+    <div class="description-box">
+      <h4>Corporate Training Programs</h4>
+      <p>
+        Delivered customized training for Meta (Facebook), TATA Steel, Toyota Connect, IBM, TCS, Sify, 
+        and many more. Specialized in upskilling teams in Android, iOS, and Flutter development.
+      </p>
+      <div class="categories">Corporate Training, Professional Development</div>
+    </div>
+    <div class="link-box">
+      <a href="https://wa.me/918148580586?text=I'm%20interested%20in%20corporate%20training" target="_blank">Get Quote</a>
+      <a href="#" class="popup-modal-dismiss">Close</a>
+    </div>
+  </div>
+
+  <div id="modal-03" class="popup-modal mfp-hide">
+    <div class="media">
+      <img src="images/Collegwr.jpg" alt="Classroom Training">
+    </div>
+    <div class="description-box">
+      <h4>Professional Certification Courses</h4>
+      <p>
+        Small batch sizes (max 10 students) ensure personalized attention. 
+        Comprehensive courses covering Android, iOS, and Flutter with 100% placement assistance.
+      </p>
+      <div class="categories">Professional Training, Certification</div>
+    </div>
+    <div class="link-box">
+      <a href="https://wa.me/918148580586?text=I%20want%20to%20join%20Android%20training%20batch" target="_blank">Join Now</a>
+      <a href="#" class="popup-modal-dismiss">Close</a>
+    </div>
+  </div>
 
   <!-- PRELOADER -->
   <div id="preloader">
@@ -566,20 +972,111 @@
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
+  
+  <!-- Custom Scripts -->
+  <script>
+    // Update current year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    
+    // Mobile menu toggle
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+      document.querySelector('.navigation').classList.toggle('active');
+    });
+    
+    // Smooth scroll for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+    
+    // Lazy loading for images
+    if ('loading' in HTMLImageElement.prototype) {
+      const images = document.querySelectorAll('img[loading="lazy"]');
+      images.forEach(img => {
+        img.src = img.src;
+      });
+    } else {
+      // Fallback for browsers that don't support lazy loading
+      const script = document.createElement('script');
+      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
+      document.body.appendChild(script);
+    }
+    
+    // Form validation enhancement
+    const form = document.getElementById('contactForm');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+        
+        // WhatsApp message with form data
+        const message = `Hi Ranjith, I'm ${data.contactName}. Email: ${data.contactEmail}, Phone: ${data.contactPhone}, Course: ${data.contactCourse}, Message: ${data.contactMessage}`;
+        const whatsappUrl = `https://wa.me/918148580586?text=${encodeURIComponent(message)}`;
+        
+        // Open WhatsApp
+        window.open(whatsappUrl, '_blank');
+        
+        // Show success message
+        document.getElementById('message-success').style.display = 'block';
+        form.reset();
+      });
+    }
+    
+    // Animated counter for stats
+    function animateCounter() {
+      const counters = document.querySelectorAll('.stat-card h3');
+      const speed = 200;
+      
+      counters.forEach(counter => {
+        const animate = () => {
+          const value = +counter.innerText.replace(/\D/g, '');
+          const data = +counter.getAttribute('data-target') || value;
+          const time = data / speed;
+          
+          if (value < data) {
+            counter.innerText = Math.ceil(value + time) + (counter.innerText.includes('+') ? '+' : '');
+            setTimeout(animate, 1);
+          } else {
+            counter.innerText = data + (counter.innerText.includes('+') ? '+' : '');
+          }
+        };
+        
+        // Start animation when element is in viewport
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              animate();
+              observer.unobserve(entry.target);
+            }
+          });
+        });
+        
+        observer.observe(counter);
+      });
+    }
+    
+    // Initialize counter animation
+    animateCounter();
+  </script>
+  
+  <!-- Google Ads -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({
       google_ad_client: "ca-pub-5300816088056407",
       enable_page_level_ads: true
     });
-  </script>
-  <!-- Secondary Analytics (if needed) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84021926-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'UA-84021926-1');
   </script>
 </body>
 </html>
