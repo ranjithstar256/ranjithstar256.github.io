@@ -240,6 +240,11 @@
       background: #25d366;
       color: white;
     }
+
+    /* Mobile navigation */
+    .main-navigation.active {
+      display: block;
+    }
     
     /* Testimonials Section */
     .testimonials {
@@ -411,13 +416,13 @@
       <div class="logo">
         <a href="index.html">AndroidManifester</a>
       </div>
-      <nav id="main-nav" role="navigation">
+      <nav id="main-nav-wrap" role="navigation">
         <button class="menu-toggle" aria-label="Menu">
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <ul class="navigation">
+        <ul class="main-navigation">
           <li class="current"><a href="#intro">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
@@ -980,7 +985,7 @@
     
     // Mobile menu toggle
     document.querySelector('.menu-toggle').addEventListener('click', function() {
-      document.querySelector('.navigation').classList.toggle('active');
+      document.querySelector('.main-navigation').classList.toggle('active');
     });
     
     // Smooth scroll for navigation
