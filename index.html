@@ -441,11 +441,9 @@
       <div class="intro-content">
         <div class="row">
           <div class="col-twelve">
-            <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/56248985" 
-                 alt="Google Certified Android Developer Badge" 
-                 width="300" 
-                 height="300"
-                 loading="eager" />
+            <div style="width: 200px; height: 200px; margin: 0 auto 30px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <i class="fab fa-android" style="font-size: 80px; color: white;"></i>
+            </div>
             <h1>Learn Mobile App Development from Google Certified Expert</h1>
             <h2>Android • iOS • Flutter Training with 12+ Years Experience</h2>
             <p class="intro-position">
@@ -731,7 +729,7 @@
             <a href="tel:+918148580586" class="cta-button">
               <i class="fas fa-phone"></i> Call: +91 81485 80586
             </a>
-              <a href="https://booking.appointy.com/AndroidManifester" class="cta-button" target="_blank" rel="noopener noreferrer">
+            <a href="#contact" class="cta-button">
               <i class="fas fa-calendar"></i> Book Appointment
             </a>
           </div>
@@ -984,23 +982,31 @@
     document.getElementById('currentYear').textContent = new Date().getFullYear();
     
     // Mobile menu toggle
-    document.querySelector('.menu-toggle').addEventListener('click', function() {
-      document.querySelector('.main-navigation').classList.toggle('active');
-    });
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNavigation = document.querySelector('.main-navigation');
+
+    if (menuToggle && mainNavigation) {
+      menuToggle.addEventListener('click', function() {
+        mainNavigation.classList.toggle('active');
+      });
+    }
     
     // Smooth scroll for navigation
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+            if (mainNavigation) {
+              mainNavigation.classList.remove('active');
+            }
+          }
+        });
       });
-    });
     
     // Lazy loading for images
     if ('loading' in HTMLImageElement.prototype) {
@@ -1073,6 +1079,65 @@
     
     // Initialize counter animation
     animateCounter();
+
+    // Scroll to top functionality
+    const goTopButton = document.querySelector('#go-top a');
+    if (goTopButton) {
+      window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+          goTopButton.style.opacity = '1';
+          goTopButton.style.visibility = 'visible';
+        } else {
+          goTopButton.style.opacity = '0';
+          goTopButton.style.visibility = 'hidden';
+        }
+      });
+    }
+
+    // Header scroll effect
+    const header = document.querySelector('header');
+    if (header) {
+      window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 100) {
+          header.style.background = 'rgba(255, 255, 255, 0.95)';
+          header.style.backdropFilter = 'blur(10px)';
+        } else {
+          header.style.background = '#fff';
+          header.style.backdropFilter = 'none';
+        }
+      });
+    }
+
+    // Lazy loading animation for elements
+    const animateOnScroll = () => {
+      const elements = document.querySelectorAll('.stat-card, .feature-card, .testimonial-card, .service');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      elements.forEach(element => {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(30px)';
+        element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(element);
+      });
+    };
+
+    // Initialize animations
+    animateOnScroll();
+
+    // Console message for developers
+    console.log('%cAndroidManifester Website', 'color: #667eea; font-size: 24px; font-weight: bold;');
+    console.log('%cDeveloped by K P Ranjith Kumar', 'color: #666; font-size: 14px;');
+    console.log('%cGoogle Certified Android Developer', 'color: #666; font-size: 14px;');
+    console.log('%c🚀 Interested in learning mobile development? Contact us!', 'color: #25d366; font-size: 16px;');
   </script>
   
   <!-- Google Ads -->
